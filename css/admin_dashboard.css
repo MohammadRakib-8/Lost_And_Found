@@ -1,0 +1,109 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Avatar styling */
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 2px solid #ccc;
+}
+
+/* Admin title */
+#adminTitle {
+    position: absolute;
+    top: 35px;
+    left: 110px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Sidebar styles */
+.leftSideDivA {
+    width: 240px;
+    background-color: #1e293b; /* dark navy */
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.leftSideDivA p {
+    background-color: #334155;
+    color: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.leftSideDivA p:hover {
+    background-color: #3b82f6; /* Tailwind blue-500 */
+    color: #fff;
+}
+
+/* Right content area */
+.rightSideDivA {
+    flex: 1;
+    padding: 40px;
+    margin-left: 240px;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+    border-left: 1px solid #e2e8f0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .leftSideDivA {
+        flex-direction: row;
+        width: 100%;
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .leftSideDivA p {
+        flex: 1;
+        text-align: center;
+    }
+
+    .rightSideDivA {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .avatar, #adminTitle {
+        position: static;
+        text-align: center;
+        margin: 10px auto;
+        display: block;
+    }
+}
