@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report</title>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../css/report_page.css">
+    </head>
+    <body>
+    <form method="post">
+        <!-- lost item id auto generated for noteeeee -->
+         <label for="reporterDetailsLabel">Reporter Details :</label>
+         <label for="reporterName"id="reporterNameLabel">Full Name :</label>
+         <input type="text" placeholder="Give your name" id="reporterName" required>
+         <label for="reporterMobile" id="reporterMobileNumLabel">Mobile Number :</label>  <!-- Update needed -->
+         <input type="text" placeholder="Mobile number" id="reporterMobileNum" required>
+         <label for="reporterId" id="reporterIdLabel">ID :</label>
+         <input type="number" id="reporterId" placeholder="Enter your id number(Optional)">
+         <label for="lostItemDetails" id="lostItemDetailsLabel">Lost Item Details</label>
+        <label for="ItemName" id="itemNameLabel">Item Name :</label>
+        <input type="text" placeholder="Lost item name" id="itemNameInput" required>
+<label for="lostdate">Item Lost Date :</label>
+<input type="date" id="lostDate" required>
+<label for="lostLocation">Lost Location</label>
+<input type="text"placeholder="Type Lost location "id="lostLocation" required>
+        <label for="Description" id="descriptionLabel">Description</label>
+<textarea type="text"placeholder="Give Description" row="4" col="50" id="descriptionInput" required></textarea>
+ <button type="submit" id="reportSubmitBtn">Submit</button>
+</form>
+<script type="module" src="../js/L_A_F.js"></script>
 </body>
 </html>

@@ -1,11 +1,10 @@
-/* Reset default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body layout */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f8;
@@ -14,7 +13,7 @@ body {
     color: #333;
 }
 
-/* Avatar styling */
+
 .avatar {
     width: 70px;
     height: 70px;
@@ -26,7 +25,7 @@ body {
     border: 2px solid #ccc;
 }
 
-/* Admin title */
+
 #adminTitle {
     position: absolute;
     top: 35px;
@@ -36,10 +35,10 @@ body {
     color: #222;
 }
 
-/* Sidebar styles */
+
 .leftSideDivA {
     width: 240px;
-    background-color: #1e293b; /* dark navy */
+    background-color: #1e293b; 
     padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
@@ -61,11 +60,11 @@ body {
 }
 
 .leftSideDivA p:hover {
-    background-color: #3b82f6; /* Tailwind blue-500 */
+    background-color: #3b82f6; 
     color: #fff;
 }
 
-/* Right content area */
+
 .rightSideDivA {
     flex: 1;
     padding: 40px;
@@ -77,7 +76,7 @@ body {
     color: #333;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
