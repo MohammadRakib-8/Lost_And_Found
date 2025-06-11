@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <div class="loginDiv">
 <h2 id="loginTitle">Login</h2>
         <form action="">
             <!-- <label for="email" id="emailBoxName">Email:</label> -->
-            <input  type="email" placeholder="Enter Your Email" id="emailBox">
+            <input  type="email" placeholder="Enter Your Email" id="emailBox" required>
             <!-- <label for="password" id="passwordBoxName">Password</label> -->
-            <input type="password" id="passwordBox" placeholder="Enter Your Password">
+             
+            <input type="password" id="passwordBox" placeholder="Enter Your Password" required>
+            <label for="roleDropdown" id="roleDropdownLabel">Select Role :</label>
+             <select id="roleDropdown" name="roleDropdown" required>
+<option value="admin">Admin</option>
+<option vlaue="manager">Manager</option>
+             </select>
             <button id="loginBtn">Submit</button>
         </form>
     </div>
+    <script type="module" src="../js/L_A_F.js"></script>
 </body>
 </html>

@@ -11,3 +11,7 @@ report_BTN.addEventListener('click',(event)=>{
 
     window.open("report_page.html","_self");
 });
+
+loginBTN.addEventListener('click',(event)=>{
+window.open("login.html","_self");
+});
