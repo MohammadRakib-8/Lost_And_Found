@@ -5,3 +5,4 @@ if(!$conn){
     echo "Connection failed" .$error[message];
     exit;
 }
+?>
