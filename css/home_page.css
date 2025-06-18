@@ -124,7 +124,6 @@ body {
   animation: popIn 1s ease forwards;
 }
 
-/* Intro Text */
 .introText {
   font-size: 18px;
   max-width: 800px;
@@ -253,7 +252,6 @@ body {
   user-select: none;
 }
 
-/* Bottom Area */
 .bottamArea {
   height: 110px;
   background: rgba(0, 0, 0, 0.15);
