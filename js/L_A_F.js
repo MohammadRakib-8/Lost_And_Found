@@ -1,7 +1,5 @@
 
 
-
-
 //Home page btn
 
 const loginBTN=document.getElementById("homePageLoginBTN");

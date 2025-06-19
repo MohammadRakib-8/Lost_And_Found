@@ -23,6 +23,10 @@ if($row =oci_fetch_assoc($stid)){
 if($role==='manager'){
     header("Location:../html/manager_dashboard.html");
 }
+if($role==="admin"){
+    header("Location:../html/admin_dashboard.html");
+}
+
    exit; 
 }
 
