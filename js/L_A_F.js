@@ -1,15 +1,24 @@
 
 
-let loginBTN=document.getElementById("adminPageBTN");
-let searchBTN=document.getElementById("search");
-let report_BTN=document.getElementById("reportBTN");
-let view_All_ItemBTN=document.getElementById("viewAllItemBTN");
-let about_US_BTN=document.getElementById("aboutUSBTN");
-let contact_US_BTN=document.getElementById("contactUSBTN");
-let 
-//Admin Page Work
 
-//Page Button Working Functionality Implementation :)
+
+//Home page btn
+
+const loginBTN=document.getElementById("homePageLoginBTN");
+const searchBTN=document.getElementById("search");
+const report_BTN=document.getElementById("reportBTN");
+const view_All_ItemBTN=document.getElementById("viewAllItemBTN");
+const about_US_BTN=document.getElementById("aboutUSBTN");
+const contact_US_BTN=document.getElementById("contactUSBTN");
+      //Admin page btn
+//const regestrationAP=document.getElementById("regForM_Btn");
+// const manageManagerAP=document.getElementById("manageM_Btn");
+// const statisticsAP=document.getElementById("statisticsBtn");
+// const logoutAPMP=document.getElementsByClassName("belowDivLogout");
+// const rightSideDivAP=document.querySelector(".rightSideDivA")
+      // Admin Page Work
+
+// Page Button Working Functionality Implementation :)
 
 report_BTN.addEventListener('click',(event)=>{
 
@@ -30,4 +39,7 @@ window.open("contact_us.html","_self");
 
 // Search button for home page left to implement ----------------
 // -------------------------------
-login
+
+
+
+//Admin Dashboard 
