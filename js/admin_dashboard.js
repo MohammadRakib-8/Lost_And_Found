@@ -159,7 +159,7 @@ manageManagerAP.addEventListener("click", () => {
             rightSideDivAP.innerHTML = html;
         });
 });
-
+/////////////
 window.deleteManager = function (managerId) {
     if (confirm("Are you sure you want to delete this manager?")) {
         fetch("../php/manageManagerAP.php", {
