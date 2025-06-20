@@ -7,16 +7,16 @@
 
 require 'db_connect.php';
 
-if($_SERVER["REQQUEST_METHOD"]=="POST"){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
 $managerId=$_POST['managerId'];
-$managerName=$_POST['nameMaReg'];
+$managerName=$_POST['managerName'];
 $managerEmail=$_POST['managerEmail'];
 $managerPhone=$_POST['managerPhone'];
 $managerPass=$_POST['managerPassword'];
 
-$query=INSERT INTO MANAGERS(MANAGER_ID,FULL_NAME,EMAIL,PHONE_NUMBER,PASSWORD)VALUES(:managerId,:managerName)
 
-    $query = "INSERT INTO MANAGERS (MANAGER_ID, FULL_NAME, EMAIL, PHONE_NUMBER, PASSWORD)
+
+    $query = "INSERT INTO MANAGERS (MANAGER_ID, FULL_NAME, EMAIL, PHONE_NUMBER,\"PASSWORD\")
               VALUES (:managerId, :managerName, :managerEmail, :managerPhone, :managerPassword)";
     
     $stid = oci_parse($conn, $query);
@@ -25,7 +25,7 @@ $query=INSERT INTO MANAGERS(MANAGER_ID,FULL_NAME,EMAIL,PHONE_NUMBER,PASSWORD)VAL
     oci_bind_by_name($stid, ":managerName", $managerName);
     oci_bind_by_name($stid, ":managerEmail", $managerEmail);
     oci_bind_by_name($stid, ":managerPhone", $managerPhone);
-    oci_bind_by_name($stid, ":managerPassword", $managerPassword);
+    oci_bind_by_name($stid, ":managerPassword", $managerPass);
 
     if (oci_execute($stid)) {
         echo "<script>alert('Manager registered successfully'); window.history.back();</script>";//

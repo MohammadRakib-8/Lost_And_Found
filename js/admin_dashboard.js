@@ -6,7 +6,7 @@ const regestrationAP=document.getElementById("regForM_Btn");
 
 
 regestrationAP.addEventListener('click',function(){
-rightSideDivAP.innerHTML=`<form class="manager-registration-form" action="../php/admin_dashboard.php">
+rightSideDivAP.innerHTML=`<form class="manager-registration-form" method="POST" action="../php/registrationManagerAP.php" >
     
     <label for="managerId">Manager ID:</label>
     <input type="number" id="managerId" name="managerId" placeholder="Enter Manager ID" required>
@@ -79,6 +79,13 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+})
+
+manageManagerAP.addEventListener('click',function(){
+rightSideDivAP.innerHTML=`
+<
+`
 
 })
 
