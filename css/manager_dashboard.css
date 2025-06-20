@@ -65,7 +65,7 @@ body {
     user-select: none;
 }
 
-#belowDivLogout:hover {
+.belowDivLogout:hover {
     background-color: #c0392b;
 }
 
