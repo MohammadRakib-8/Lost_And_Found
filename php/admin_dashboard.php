@@ -3,7 +3,7 @@
 // require 'db_connect.php';
 // echo "Connected to Oracal!";
 // oci_close($conn);
-//--------------------------------
+//------------------------------------
 
 require 'db_connect.php';
 
@@ -40,6 +40,7 @@ $query=INSERT INTO MANAGERS(MANAGER_ID,FULL_NAME,EMAIL,PHONE_NUMBER,PASSWORD)VAL
     echo "Invalid request.";
 }
 ?>
+
 
 
 
