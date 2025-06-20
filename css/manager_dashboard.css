@@ -51,9 +51,9 @@ body {
     color: #ffffff;
 }
 
-#belowDivLogout {
+.belowDivLogout {
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: #e74c3c;
     color: white;
     padding: 12px 20px;
@@ -61,7 +61,8 @@ body {
     text-align: center;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    user-select: none;
 }
 
 #belowDivLogout:hover {
