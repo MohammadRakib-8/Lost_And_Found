@@ -1,6 +1,6 @@
 const manageManagerAP = document.getElementById("manageM_Btn");
 const statisticsAP = document.getElementById("statisticsBtn");
-const logoutAPMP = document.getElementsByClassName("belowDivLogout");
+const logoutAPMP = document.getElementById("belowDivLogout");
 const rightSideDivAP = document.querySelector(".rightSideDivA");
 const regestrationAP = document.getElementById("regForM_Btn");
 
@@ -207,3 +207,12 @@ window.showUpdateForm = function (id, name, email) {
             });
     });
 };
+
+logoutAPMP.addEventListener('click',function(){
+if(confirm("Are you sure you want to log out?")){
+
+window.location.href="../php/logout.php";
+}
+
+});
+
