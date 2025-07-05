@@ -1,31 +1,34 @@
-<?php///////////////////////////
-require_once 'db_connect.php'; 
+<?php
+require "db_connect.php";
 
-header('Content-Type: application/json');
+header('Content-Type:application/json');
 
-if (!$conn) {
-    echo json_encode(["error" => "Database connection failed"]);
+
+
+if(!$conn){
+
+    $error=oci_error();
+
+    echo "Connection failed".$error[message];
     exit;
 }
 
-$sql = "SELECT * FROM founditems";
-$statement = oci_parse($conn, $sql);
+$sql="SELECT * FROM founditems";
 
-if (!$statement) {
-    $e = oci_error($conn);
-    echo json_encode(["error" => "SQL parse error: " . $e['message']]);
+$statement=oci_parse($conn,$sql);
+
+if(!oci_execute($statement)){
+    $error= oci_error($statement);  //$e = oci_error($conn);
+    echo "Error Occured".$error[message];
     exit;
 }
-if (!oci_execute($statement)) {
-    $e = oci_error($statement);
-    echo json_encode(["error" => "SQL execution error: " . $e['message']]);
-    exit;
+$FoundItems=[];
+
+while($row=oci_fetch_assoc($statement)){
+    $FoundItems[]=$row;
 }
-$foundItems = [];
-while ($row = oci_fetch_assoc($statement)) {
-    $foundItems[] = $row;
-}
-echo json_encode($foundItems);
+echo json_encode($FoundItems);
 oci_free_statement($statement);
 oci_close($conn);
+
 ?>
