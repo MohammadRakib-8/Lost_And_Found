@@ -1,29 +1,27 @@
 <?php
-///////////////////////////////////////////////
-require_once 'db_connect.php';  // your Oracle DB connection
+require "db_connect.php";
 
-header('Content-Type: application/json');
+header ("Content-Type:application/json");
 
-$sql = "SELECT LOST_ITEM_ID, LOST_ITEM_NAME, DESCRIPTION, TO_CHAR(REPORT_DATE, 'YYYY-MM-DD') REPORT_DATE, LOST_LOCATION, TO_CHAR(LOST_DATE, 'YYYY-MM-DD') LOST_DATE, STATUS, USER_ID FROM lostitems";
-$statement = oci_parse($conn, $sql);
-
-if (!$statement) {
-    echo json_encode(["error" => "SQL parse failed"]);
+if(!$conn){
+    $error=oci_error($conn);
+    echo "Connection failed".$error[message];
     exit;
 }
 
-if (!oci_execute($statement)) {
-    echo json_encode(["error" => "SQL execution failed"]);
+$sql="SELECT * FROM LOSTITEMS";
+$statement=oci_parse($conn,$sql);
+
+if(!oci_execute($statement)){
+    $error=oci_error($$statement);
+    echo "Error Occured" .$error[message];
     exit;
 }
 
-$lostItems = [];
-while ($row = oci_fetch_assoc($statement)) {
-    $lostItems[] = $row;
+$LostItems=[];
+while($row=oci_fetch_assoc($statement)){
+    $LostItems[]=$row;
 }
-
-echo json_encode($lostItems);
-
+echo json_encode($LostItems);
 oci_free_statement($statement);
 oci_close($conn);
-?>
