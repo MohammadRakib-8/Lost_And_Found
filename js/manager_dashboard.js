@@ -3,7 +3,7 @@ const foundItemReportListBTN = document.getElementById("foundItemTilte");
 const claimItemListBTN = document.getElementById("claimItemTitle");
 const logoutBTN = document.querySelector(".managerLogout");
 const rightSideDiv = document.getElementById("rightSideDivManager");
-
+const addFoundItemBTN=document.getElementById("addFoundItem");
 
 lostItemReportListBTN.addEventListener('click', function () {
     fetch("../php/report_lost_Item_list_MP.php")
@@ -169,73 +169,33 @@ foundItemReportListBTN.addEventListener("click", () => {
 
 ///////////
 //////////////
-claimItemListBTN.addEventListener("click", () => {
-    fetch("../php/claim_item_list.php")
-        .then(response => response.json())
-        .then(claimItems => {
-            let html = `
-                <style>
-                    .claim-item-table {
-                        padding: 20px;
-                        font-family: Arial, sans-serif;
-                    }
-                    .claim-item-table h1 {
-                        text-align: center;
-                        color: #c0392b;
-                        margin-bottom: 20px;
-                    }
-                    .claim-item-table table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        background: #fff;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                    }
-                    .claim-item-table th, .claim-item-table td {
-                        padding: 12px;
-                        text-align: center;
-                        border-bottom: 1px solid #ddd;
-                    }
-                    .claim-item-table th {
-                        background-color: #c0392b;
-                        color: white;
-                    }
-                    .claim-item-table tr:hover {
-                        background-color: #f1f1f1;
-                    }
-                </style>
-                <div class="claim-item-table">
-                    <h1>Claim Item LIST</h1>
-                    <table>
-                        <tr>
-                            <th>Claim ID</th>
-                            <th>Status</th>
-                            <th>Claim Date</th>
-                            <th>Description</th>
-                            <th>User ID</th>
-                            <th>Manager ID</th>
-                            <th>Found Item ID</th>
-                        </tr>`;
+////MYW
+addFoundItemBTN.addEventListener('click',function(){
+    rightSideDiv.innerHTML=`
+    <form class= "addFoundItemsForm" method="POST" action="../php/addFoundItemsMP.php" >
+<label for="foundItemNM">Found Item Name</label>
+    <input name="foundItemName" id="foundItemNM" placeholder="Give Found Item Name">
+      <br>
+  <label for="description">Description:</label>
+  <input type="text" name="description" id="description" placeholder="Enter description" required>
+  <br>
+  <label for="foundDate">Found Date:</label>
+  <input type="date" name="foundDate" id="foundDate" required>
+  <br>
+  <label for="status">Status:</label>
+  <input type="text" name="status" id="status" placeholder="e.g., Claimed, Unclaimed" required>
+  <br>
+  <label for="foundLocation">Found Location:</label>
+  <input type="text" name="foundLocation" id="foundLocation" placeholder="Enter found location" required>
+  <br>
+  <label for="managerId">Manager ID:</label>
+  <input type="number" name="managerId" id="managerId" placeholder="Enter manager ID" required>
+  <br>
+  <button  type="submit" id="submitBTN">Submit</button>
+    </from>
+    `;
+})
 
-            for (let item of claimItems) {
-                html += `
-                    <tr>
-                        <td>${item.CLAIM_ID}</td>
-                        <td>${item.STATUS}</td>
-                        <td>${item.CLAIM_DATE}</td>
-                        <td>${item.DESCRIPTION}</td>
-                        <td>${item.USER_ID}</td>
-                        <td>${item.MANAGER_ID}</td>
-                        <td>${item.FOUND_ITEM_ID}</td>
-                    </tr>`;
-            }
-
-            html += `</table></div>`;
-            rightSideDiv.innerHTML = html;
-        })
-        .catch(error => {
-            rightSideDiv.innerHTML = `<p style="color:red;">Error loading data: ${error}</p>`;
-        });
-});
 
 logoutBTN.addEventListener("click", () => {
     window.location.href = "../html/login.html";
