@@ -17,7 +17,6 @@ oci_bind_by_name($stid,":password",$password);
 oci_execute($stid);
 
 
-
 if($row =oci_fetch_assoc($stid)){
     // echo "Login Successful.Welcome {$row['FULL_NAME']}";
 if($role==='manager'){

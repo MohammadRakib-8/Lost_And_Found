@@ -4,6 +4,7 @@ const claimItemListBTN = document.getElementById("claimItemTitle");
 const logoutBTN = document.querySelector(".managerLogout");
 const rightSideDiv = document.getElementById("rightSideDivManager");
 const addFoundItemBTN=document.getElementById("addFoundItem");
+const reporterDetailsBTN=document.getElementById("reportUsersDetails");
 
 lostItemReportListBTN.addEventListener('click', function () {
     fetch("../php/report_lost_Item_list_MP.php")
@@ -195,7 +196,11 @@ addFoundItemBTN.addEventListener('click',function(){
     </from>
     `;
 })
-
+reporterDetailsBTN.addEventListener('click',()=>{
+    fetch("../php/reporter_details.php")
+    .then(response =>response.json())
+    rightSideDiv.innerHTML=``
+})
 
 logoutBTN.addEventListener("click", () => {
     window.location.href = "../html/login.html";
