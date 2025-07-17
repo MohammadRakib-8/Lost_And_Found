@@ -199,8 +199,48 @@ addFoundItemBTN.addEventListener('click',function(){
 reporterDetailsBTN.addEventListener('click',()=>{
     fetch("../php/reporter_details.php")
     .then(response =>response.json())
-    rightSideDiv.innerHTML=``
+    .then(reporterDetails =>{
+    let html =`
+    
+    
+    <div id="reporterDetails">
+    <h1>
+    <table>
+    <tr>
+<th>User Id</th>
+<th>Full Name</th>
+<th>Role</th>
+<th>Phone Number</th>    
+<th>Email</th>
+    </tr>`;
+
+for (let details of reporterDetails){
+html+=`
+<tr>
+<td>${details.USER_ID}</td>
+<td>${details.FULL_NAME}</td>
+<td>${details.ROLE}</td>
+<td>${details.PHONE_NUMBER}</td>
+<td>${details.EMAIL}</td>
+</tr>
+`
+}
+
+html+=`</table>
+</div>`;
+reporterDetailsBTN.innerHTML=html;
+    
 })
+.catch(error=>{
+
+reporterDetailsBTN.innerHTML=`<p style="color:red;">Error loading data: ${error}</p>`;
+
+})
+
+
+
+
+});
 
 logoutBTN.addEventListener("click", () => {
     window.location.href = "../html/login.html";

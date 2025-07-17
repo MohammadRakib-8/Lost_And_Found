@@ -9,7 +9,7 @@ if(!$conn){
     exit;
 }
 
-$sql="SELECT USER_ID,FULL_NAME,ROLE,PHONE_NUMBER,EMAIL FROM USERS";
+$sql="SELECT * FROM USERS";
 
 $statement=oci_parse($conn,$sql);
 
