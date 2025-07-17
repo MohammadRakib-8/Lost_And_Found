@@ -15,17 +15,17 @@ lostItemReportListBTN.addEventListener('click', function () {
                 <div class="report-lost-item-table">
                     <h1>Reported Lost Item LIST</h1>
                     <table>
-                        <tr>
-                            <th>Lost Item ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Report Date</th>
-                            <th>Lost Location</th>
-                            <th>Lost Date</th>
-                            <th>Status</th>
-                            <th>Reporter ID</th>
-                            <th>Action</th>
-                        </tr>`;
+<tr>
+    <th>Lost Item ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Report Date</th>
+    <th>Lost Location</th>
+    <th>Lost Date</th>
+    <th>Status</th>
+    <th>Reporter ID</th>
+    <th>Action</th>
+</tr>`;
 
             for (let item of lostItems) {
                 html += `
@@ -108,7 +108,7 @@ foundItemReportListBTN.addEventListener("click", () => {
                         <td>${item.FOUND_DATE}</td>
                         <td>${item.FOUND_LOCATION}</td>
                         <td>${item.STATUS}</td>
-                        <td>${item.USER_ID}</td>
+                        <td>${item.MANAGER_ID}</td>
                     </tr>`;
             }
 
@@ -161,8 +161,6 @@ reporterDetailsBTN.addEventListener('click',()=>{
     .then(response =>response.json())
     .then(reporterDetails =>{
     let html =`
-    
-    
     <div class="reporterDetails">
     <h1>Reporter Details</h1>
     <table>
