@@ -11,47 +11,7 @@ lostItemReportListBTN.addEventListener('click', function () {
         .then(response => response.json())
         .then(lostItems => {
             let html = `
-                <style>
-                    .report-lost-item-table {
-                        padding: 20px;
-                        font-family: Arial, sans-serif;
-                    }
-                    .report-lost-item-table h1 {
-                        text-align: center;
-                        color: #2c3e50;
-                        margin-bottom: 20px;
-                    }
-                    .report-lost-item-table table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        background: #fff;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                    }
-                    .report-lost-item-table th, .report-lost-item-table td {
-                        padding: 12px;
-                        text-align: center;
-                        border-bottom: 1px solid #ddd;
-                    }
-                    .report-lost-item-table th {
-                        background-color: #2980b9;
-                        color: white;
-                    }
-                    .report-lost-item-table tr:hover {
-                        background-color: #f1f1f1;
-                    }
-                    .update-btn {
-                        background-color: #27ae60;
-                        color: white;
-                        border: none;
-                        padding: 6px 12px;
-                        cursor: pointer;
-                        border-radius: 4px;
-                        transition: background-color 0.3s ease;
-                    }
-                    .update-btn:hover {
-                        background-color: #1e8449;
-                    }
-                </style>
+                
                 <div class="report-lost-item-table">
                     <h1>Reported Lost Item LIST</h1>
                     <table>
@@ -203,8 +163,8 @@ reporterDetailsBTN.addEventListener('click',()=>{
     let html =`
     
     
-    <div id="reporterDetails">
-    <h1>
+    <div class="reporterDetails">
+    <h1>Reporter Details</h1>
     <table>
     <tr>
 <th>User Id</th>
@@ -223,17 +183,17 @@ html+=`
 <td>${details.PHONE_NUMBER}</td>
 <td>${details.EMAIL}</td>
 </tr>
-`
+`;
 }
 
 html+=`</table>
 </div>`;
-reporterDetailsBTN.innerHTML=html;
+rightSideDiv.innerHTML=html;
     
 })
 .catch(error=>{
 
-reporterDetailsBTN.innerHTML=`<p style="color:red;">Error loading data: ${error}</p>`;
+rightSideDiv.innerHTML=`<p style="color:red;">Error loading data: ${error}</p>`;
 
 })
 
