@@ -96,7 +96,7 @@ foundItemReportListBTN.addEventListener("click", () => {
                             <th>Found Date</th>
                             <th>Location</th>
                             <th>Status</th>
-                            <th>Reporter ID</th>
+                            <th>Manager ID</th>
                         </tr>`;
 
             for (let item of foundItems) {
