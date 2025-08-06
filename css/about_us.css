@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f8ec, #b6f1c2);
+  color: #2e3c3f;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  background: linear-gradient(to right, #4CAF50, #2E7D32);
+  color: white;
+  text-align: center;
+  padding: 60px 20px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  animation: slideDown 1s ease;
+}
+
+header p {
+  font-size: 20px;
+  animation: slideDown 1.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.description h2,
+.team h2 {
+  font-size: 32px;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.description p {
+  font-size: 18px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+  color: #3a3a3a;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.member {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 260px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-top: 4px solid #4CAF50;
+  backdrop-filter: blur(10px);
+}
+
+.member:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #2E7D32;
+}
+
+.id, .department {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+footer {
+  background: #d7f4de;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  color: #4b4b4b;
+  margin-top: 60px;
+  border-top: 2px solid #a2e6b1;
+}
