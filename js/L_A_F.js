@@ -19,10 +19,10 @@ const rightSideDivAP=document.querySelector(".rightSideDivA")
 
 // Page Button Working Functionality Implementation :)
 
-// report_BTN.addEventListener('click',(event)=>{
+report_BTN.addEventListener('click',(event)=>{
 
-//     window.open("report_page.html","_self");
-// });
+   window.open("report_page.html","_self");
+});
  loginBTN.addEventListener('click',(event)=>{
  window.open("login.html","_self");
  });
