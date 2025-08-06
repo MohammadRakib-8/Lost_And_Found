@@ -24,9 +24,9 @@ const rightSideDivAP=document.querySelector(".rightSideDivA")
 
 //     window.open("report_page.html","_self");
 // });
-// loginBTN.addEventListener('click',(event)=>{
-// window.open("login.html","_self");
-// });
+ loginBTN.addEventListener('click',(event)=>{
+ window.open("login.html","_self");
+ });
 
 
 
