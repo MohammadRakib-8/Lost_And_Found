@@ -1,5 +1,4 @@
 
-
 //Home page btn
 
 const loginBTN=document.getElementById("homePageLoginBTN");
@@ -28,12 +27,10 @@ const rightSideDivAP=document.querySelector(".rightSideDivA")
  window.open("login.html","_self");
  });
 
+view_All_ItemBTN.addEventListener('click',()=>{
+//window.open("view_found_item.html","_self");
 
-
-view_All_ItemBTN.addEventListener('click',(event)=>{
-// window.open("view_found_item.html","_self");
-
-fetch("../php/view_found_item.php")
+fetch("../php/found_item_list.php")
 .then(response=>response.json())
 .then(foundItems=>{
 let html=`
@@ -50,7 +47,7 @@ let html=`
 <th>Manager ID</th>
 </tr>`
 
-for(founI of foundItems){
+for(let founI of foundItems){
       html+=`
       <tr>
 <td>${founI.FOUND_ITEM_ID}</td>
