@@ -51,7 +51,7 @@ body {
     color: #ffffff;
 }
 
-.belowDivLogout {
+.managerLogout {
     margin-top: auto;
     margin-bottom: 30px;
     background-color: #e74c3c;
@@ -65,7 +65,7 @@ body {
     user-select: none;
 }
 
-.belowDivLogout:hover {
+.managerLogout:hover {
     background-color: #c0392b;
 }
 

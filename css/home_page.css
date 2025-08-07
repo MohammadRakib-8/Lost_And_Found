@@ -9,11 +9,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Background image behind gradient */
   background:
     url('../asset/imges/homeP.png') no-repeat center center fixed,
     linear-gradient(135deg, #a3cef1, #74b9ff);
-  background-size: cover;  /* makes image cover entire area */
+  background-size: cover;  
   color: #e0f0ff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,33 +70,33 @@ body {
   letter-spacing: 1.2px;
 }
 
-/* Green styled login button with deep green glowing border */
+
 #homePageLoginBTN {
   position: absolute;
   top: 25px;
   right: 25px;
   padding: 10px 25px;
   background: rgba(255, 255, 255, 0.25);
-  border: 2px solid #0b3d0b; /* deep green border */
+  border: 2px solid #0b3d0b; 
   color: #004d1a;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px 4px #0b3d0b88; /* deep green glow */
+  box-shadow: 0 0 15px 4px #0b3d0b88; 
   backdrop-filter: blur(12px);
   user-select: none;
 }
 
 #homePageLoginBTN:hover {
-  border-color: #28a745; /* bright green border on hover */
-  box-shadow: 0 0 25px 6px #28a745cc; /* stronger green glow */
+  border-color: #28a745; 
+  box-shadow: 0 0 25px 6px #28a745cc; 
   background: rgba(255, 255, 255, 0.3);
   color: #006600;
   transform: scale(1.05);
 }
 
-/* #adminPageBTN hover styling */
+
 #adminPageBTN:hover {
   background: rgba(40, 167, 69, 0.45);
   color: #00590a;
@@ -139,12 +138,12 @@ body {
   text-shadow: 0 0 8px rgba(196, 217, 255, 0.7);
 }
 
-/* Search input box with white-ish border */
+
 .middleAreaH input[type="text"] {
   width: 65%;
   padding: 14px 18px;
   margin-bottom: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.9); /* white-ish border */
+  border: 2px solid rgba(255, 255, 255, 0.9); 
   border-radius: 20px;
   font-size: 17px;
   color: #002244;
@@ -160,38 +159,37 @@ body {
 }
 
 .middleAreaH input[type="text"]:focus {
-  border-color: #ffffff; /* pure white on focus */
+  border-color: #ffffff; 
   background: rgba(255, 255, 255, 0.55);
   box-shadow: 0 0 18px #ffffffcc;
   outline: none;
   color: #001833;
 }
 
-/* Green styled search button */
+
 #search {
   padding: 12px 28px;
   margin-left: 10px;
-  background: #28a745cc; /* green with transparency */
+  background: #28a745cc; 
   color: #f0f8ff;
   border: none;
   border-radius: 20px;
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 5px 18px #1e7a2fcc; /* darker green shadow */
+  box-shadow: 0 5px 18px #1e7a2fcc; 
   transition: all 0.3s ease;
   user-select: none;
   backdrop-filter: blur(8px);
 }
 
 #search:hover {
-  background: #28a745ff; /* solid green */
+  background: #28a745ff; 
   transform: scale(1.07);
   box-shadow: 0 8px 25px #1e7a2fff;
   color: #d4ffd4;
 }
 
-/* Green styled navigation buttons */
 .navigationBTNArea {
   margin-top: 40px;
 }
@@ -199,21 +197,21 @@ body {
 .navigationBTNArea button {
   margin: 12px;
   padding: 14px 30px;
-  background: #28a745cc; /* green with transparency */
+  background: #28a745cc; 
   border: none;
   color: #e0f0ff;
   border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  box-shadow: 0 5px 18px #1e7a2fcc; /* darker green shadow */
+  box-shadow: 0 5px 18px #1e7a2fcc; 
   transition: all 0.3s ease;
   user-select: none;
   backdrop-filter: blur(10px);
 }
 
 .navigationBTNArea button:hover {
-  background: #28a745ff; /* solid green */
+  background: #28a745ff; 
   transform: scale(1.1);
   box-shadow: 0 8px 28px #1e7a2fff;
   color: #d4ffd4;

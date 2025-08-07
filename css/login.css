@@ -1,4 +1,4 @@
-/* Animated green wave-like gradient background */
+
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +24,6 @@ body {
   }
 }
 
-/* Gentle pulse animation for form */
 @keyframes pulseScale {
   0%, 100% {
     transform: scale(1);
