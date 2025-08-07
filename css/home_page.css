@@ -1,23 +1,24 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(135deg, #a3cef1, #74b9ff);
+  /* Background image behind gradient */
+  background:
+    url('../asset/imges/homeP.png') no-repeat center center fixed,
+    linear-gradient(135deg, #a3cef1, #74b9ff);
+  background-size: cover;  /* makes image cover entire area */
   color: #e0f0ff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation: fadeInBody 1s ease forwards;
 }
-
 
 @keyframes fadeInBody {
   from { opacity: 0; }
@@ -39,7 +40,6 @@ body {
   100% { transform: scale(1); opacity: 1; }
 }
 
-
 .glass-container {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
@@ -48,7 +48,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 100, 255, 0.2);
 }
-
 
 .topAreaH {
   padding: 30px 20px;
@@ -65,7 +64,6 @@ body {
   max-width: 900px;
 }
 
-
 #welcomeP {
   font-size: 36px;
   font-weight: 700;
@@ -73,31 +71,39 @@ body {
   letter-spacing: 1.2px;
 }
 
-
+/* Green styled login button with deep green glowing border */
 #homePageLoginBTN {
   position: absolute;
   top: 25px;
   right: 25px;
   padding: 10px 25px;
   background: rgba(255, 255, 255, 0.25);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  color: #003366;
+  border: 2px solid #0b3d0b; /* deep green border */
+  color: #004d1a;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+  box-shadow: 0 0 15px 4px #0b3d0b88; /* deep green glow */
   backdrop-filter: blur(12px);
   user-select: none;
 }
 
-#adminPageBTN:hover {
-  background: rgba(255, 255, 255, 0.45);
-  color: #0059b3;
-  transform: scale(1.1);
-  box-shadow: 0 0 18px rgba(0, 102, 255, 0.8);
+#homePageLoginBTN:hover {
+  border-color: #28a745; /* bright green border on hover */
+  box-shadow: 0 0 25px 6px #28a745cc; /* stronger green glow */
+  background: rgba(255, 255, 255, 0.3);
+  color: #006600;
+  transform: scale(1.05);
 }
 
+/* #adminPageBTN hover styling */
+#adminPageBTN:hover {
+  background: rgba(40, 167, 69, 0.45);
+  color: #00590a;
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(40, 167, 69, 0.8);
+}
 
 .middleAreaH {
   flex: 1;
@@ -112,7 +118,6 @@ body {
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 32px rgba(100, 150, 255, 0.25);
 }
-
 
 .middleAreaH h2 {
   font-size: 30px;
@@ -134,12 +139,12 @@ body {
   text-shadow: 0 0 8px rgba(196, 217, 255, 0.7);
 }
 
-
+/* Search input box with white-ish border */
 .middleAreaH input[type="text"] {
   width: 65%;
   padding: 14px 18px;
   margin-bottom: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.9); /* white-ish border */
   border-radius: 20px;
   font-size: 17px;
   color: #002244;
@@ -155,37 +160,38 @@ body {
 }
 
 .middleAreaH input[type="text"]:focus {
-  border-color: #0066ff;
+  border-color: #ffffff; /* pure white on focus */
   background: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0 18px #0066ffaa;
+  box-shadow: 0 0 18px #ffffffcc;
   outline: none;
   color: #001833;
 }
 
-
+/* Green styled search button */
 #search {
   padding: 12px 28px;
   margin-left: 10px;
-  background: #3399ffcc;
+  background: #28a745cc; /* green with transparency */
   color: #f0f8ff;
   border: none;
   border-radius: 20px;
   font-size: 17px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 5px 18px #3399ffaa;
+  box-shadow: 0 5px 18px #1e7a2fcc; /* darker green shadow */
   transition: all 0.3s ease;
   user-select: none;
   backdrop-filter: blur(8px);
 }
 
 #search:hover {
-  background: #3399ffee;
+  background: #28a745ff; /* solid green */
   transform: scale(1.07);
-  box-shadow: 0 8px 25px #3399ffdd;
+  box-shadow: 0 8px 25px #1e7a2fff;
+  color: #d4ffd4;
 }
 
-
+/* Green styled navigation buttons */
 .navigationBTNArea {
   margin-top: 40px;
 }
@@ -193,25 +199,25 @@ body {
 .navigationBTNArea button {
   margin: 12px;
   padding: 14px 30px;
-  background: #3399ffcc;
+  background: #28a745cc; /* green with transparency */
   border: none;
   color: #e0f0ff;
   border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 700;
-  box-shadow: 0 5px 18px #2277ffcc;
+  box-shadow: 0 5px 18px #1e7a2fcc; /* darker green shadow */
   transition: all 0.3s ease;
   user-select: none;
   backdrop-filter: blur(10px);
 }
 
 .navigationBTNArea button:hover {
-  background: #3399ffee;
+  background: #28a745ff; /* solid green */
   transform: scale(1.1);
-  box-shadow: 0 8px 28px #2277ffee;
+  box-shadow: 0 8px 28px #1e7a2fff;
+  color: #d4ffd4;
 }
-
 
 .featuresArea {
   margin-top: 50px;
@@ -257,5 +263,5 @@ body {
   background: rgba(0, 0, 0, 0.15);
   color: #cce6ff;
   display: flex;
-  align-items: center
+  align-items: center;
 }
