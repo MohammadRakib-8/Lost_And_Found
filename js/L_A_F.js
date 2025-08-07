@@ -19,9 +19,12 @@ const rightSideDivAP=document.querySelector(".rightSideDivA")
       // Admin Page Work
 
 // Page Button Working Functionality Implementation :)
-// about_US_BTN.addEventListener('click',()=>{
-// window.open("about_us.html","_self");
-// })
+if(about_US_BTN){
+about_US_BTN.addEventListener('click',()=>{
+window.open("about_us.html","_self");
+})
+}
+
 if(report_BTN){
 report_BTN.addEventListener('click',(event)=>{
 
