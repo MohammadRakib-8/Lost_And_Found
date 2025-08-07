@@ -10,7 +10,49 @@ lostItemReportListBTN.addEventListener('click', function () {
     fetch("../php/report_lost_Item_list_MP.php")
         .then(response => response.json())
         .then(lostItems => {
-            let html = `
+            let html = `<style>
+ .report-lost-item-table {
+                        padding: 20px;
+                        font-family: Arial, sans-serif;
+                    }
+                    .report-lost-item-table h1 {
+                        text-align: center;
+                        color: #2c3e50;
+                        margin-bottom: 20px;
+                    }
+                    .report-lost-item-table table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        background: #fff;
+                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                    }
+                    .report-lost-item-table th, .report-lost-item-table td {
+                        padding: 12px;
+                        text-align: center;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    .report-lost-item-table th {
+                        background-color: #2980b9;
+                        color: white;
+                    }
+                    .report-lost-item-table tr:hover {
+                        background-color: #f1f1f1;
+                    }
+                    .update-btn {
+                        background-color: #27ae60;
+                        color: white;
+                        border: none;
+                        padding: 6px 12px;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: background-color 0.3s ease;
+                    }
+                    .update-btn:hover {
+                        background-color: #1e8449;
+                    }
+
+
+            </style>
                 
                 <div class="report-lost-item-table">
                     <h1>Reported Lost Item LIST</h1>
@@ -132,7 +174,46 @@ foundItemReportListBTN.addEventListener("click", () => {
 //////////////
 ////MYW
 addFoundItemBTN.addEventListener('click',function(){
-    rightSideDiv.innerHTML=`
+    rightSideDiv.innerHTML=`<style>
+    .addFoundItemsForm {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #ffffff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+    }
+    .addFoundItemsForm label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    .addFoundItemsForm input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    #submitBTN {
+        background-color: #2980b9;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #submitBTN:hover {
+        background-color: #1f618d;
+    }
+    </style>
+
     <form class= "addFoundItemsForm" method="POST" action="../php/addFoundItemsMP.php" >
 <label for="foundItemNM">Found Item Name</label>
     <input name="foundItemName" id="foundItemNM" placeholder="Give Found Item Name">
@@ -160,7 +241,35 @@ reporterDetailsBTN.addEventListener('click',()=>{
     fetch("../php/reporter_details.php")
     .then(response =>response.json())
     .then(reporterDetails =>{
-    let html =`
+    let html =`<style>
+            .reporterDetails {
+                padding: 20px;
+                font-family: Arial, sans-serif;
+            }
+            .reporterDetails h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 20px;
+            }
+            .reporterDetails table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .reporterDetails th, .reporterDetails td {
+                padding: 12px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+            .reporterDetails th {
+                background-color: #2980b9;
+                color: white;
+            }
+            .reporterDetails tr:hover {
+                background-color: #f1f1f1;
+            }
+            </style>
     <div class="reporterDetails">
     <h1>Reporter Details</h1>
     <table>
