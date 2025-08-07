@@ -1,5 +1,6 @@
 
 //Home page btn
+document.addEventListener("DOMContentLoaded", function () {
 
 const loginBTN=document.getElementById("homePageLoginBTN");
 const searchBTN=document.getElementById("search");
@@ -18,18 +19,22 @@ const rightSideDivAP=document.querySelector(".rightSideDivA")
       // Admin Page Work
 
 // Page Button Working Functionality Implementation :)
-about_US_BTN.addEventListener('click',()=>{
-window.open("about_us.html","_self");
-})
-
+// about_US_BTN.addEventListener('click',()=>{
+// window.open("about_us.html","_self");
+// })
+if(report_BTN){
 report_BTN.addEventListener('click',(event)=>{
 
    window.open("report_page.html","_self");
-});
+});}
+
+if(loginBTN){
  loginBTN.addEventListener('click',(event)=>{
  window.open("login.html","_self");
  });
 
+}
+if(view_All_ItemBTN)
 view_All_ItemBTN.addEventListener('click',()=>{
 //window.open("view_found_item.html","_self");
 
@@ -71,6 +76,9 @@ fullHomePage.innerHTML=html;
 .catch(error=>{
       fullHomePage.innerHTML=`<p style="color:red;">Error loading data:${error}</p>`;
 })
+
+})
+
 
 });
 

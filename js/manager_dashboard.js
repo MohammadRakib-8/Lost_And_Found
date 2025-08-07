@@ -58,57 +58,57 @@ foundItemReportListBTN.addEventListener("click", () => {
         .then(foundItems => {
             let html = `
                 <style>
-                    .found-item-table {
-                        padding: 20px;
-                        font-family: Arial, sans-serif;
-                    }
-                    .found-item-table h1 {
-                        text-align: center;
-                        color: #27ae60;
-                        margin-bottom: 20px;
-                    }
-                    .found-item-table table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        background: #fff;
-                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                    }
-                    .found-item-table th, .found-item-table td {
-                        padding: 12px;
-                        text-align: center;
-                        border-bottom: 1px solid #ddd;
-                    }
-                    .found-item-table th {
-                        background-color: #27ae60;
-                        color: white;
-                    }
-                    .found-item-table tr:hover {
-                        background-color: #f1f1f1;
-                    }
+                .found-item-table {
+                    padding: 20px;
+                    font-family: Arial, sans-serif;
+                }
+                .found-item-table h1 {
+                    text-align: center;
+                    color: #27ae60;
+                    margin-bottom: 20px;
+                }
+                .found-item-table table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    background: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                .found-item-table th, .found-item-table td {
+                    padding: 12px;
+                    text-align: center;
+                    border-bottom: 1px solid #ddd;
+                }
+                .found-item-table th {
+                    background-color: #27ae60;
+                    color: white;
+                }
+                .found-item-table tr:hover {
+                    background-color: #f1f1f1;
+                }
                 </style>
                 <div class="found-item-table">
                     <h1>Found Item LIST</h1>
                     <table>
                         <tr>
-                            <th>Found Item ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Found Date</th>
-                            <th>Location</th>
-                            <th>Status</th>
-                            <th>Manager ID</th>
+                        <th>Found Item ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Found Date</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Manager ID</th>
                         </tr>`;
 
             for (let item of foundItems) {
                 html += `
                     <tr>
-                        <td>${item.FOUND_ITEM_ID}</td>
-                        <td>${item.FOUND_ITEM_NAME}</td>
-                        <td>${item.DESCRIPTION}</td>
-                        <td>${item.FOUND_DATE}</td>
-                        <td>${item.FOUND_LOCATION}</td>
-                        <td>${item.STATUS}</td>
-                        <td>${item.MANAGER_ID}</td>
+                    <td>${item.FOUND_ITEM_ID}</td>
+                    <td>${item.FOUND_ITEM_NAME}</td>
+                    <td>${item.DESCRIPTION}</td>
+                    <td>${item.FOUND_DATE}</td>
+                    <td>${item.FOUND_LOCATION}</td>
+                    <td>${item.STATUS}</td>
+                    <td>${item.MANAGER_ID}</td>
                     </tr>`;
             }
 
