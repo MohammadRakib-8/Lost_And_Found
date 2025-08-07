@@ -1,77 +1,137 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Animated green wave-like gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(270deg, #a1e887, #6ac47a, #43965f, #a1e887);
+  background-size: 800% 800%;
+  animation: waveGradient 20s ease infinite;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #87cefa, #e0f7ff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gentle pulse animation for form */
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .loginDiv {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 350px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 48px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 40px 50px;
+  width: 360px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  animation: pulseScale 6s ease-in-out infinite;
 }
 
 #loginTitle {
-    text-align: center;
-    font-size: 26px;
-    color: #007acc;
-    margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  user-select: none;
 }
 
 input[type="email"],
 input[type="password"],
 select {
-    width: 100%;
-    padding: 12px 14px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #b0d6f7;
-    border-radius: 10px;
-    background-color: #f0faff;
-    font-size: 15px;
-    transition: 0.3s;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="email"]:focus,
 input[type="password"]:focus,
 select:focus {
-    outline: none;
-    border-color: #007acc;
-    box-shadow: 0 0 5px rgba(0, 122, 204, 0.3);
-}
-
-#loginBtn {
-    width: 100%;
-    padding: 12px;
-    background-color: #007acc;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#loginBtn:hover {
-    background-color: #005f99;
+  outline: none;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 12px #66bb6a;
 }
 
 #roleDropdownLabel {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 5px;
-    display: block;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: white;
+  user-select: none;
+  padding-left: 12px;
+}
+
+#loginBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #66bb6a, #4caf50);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 18px rgba(76, 175, 80, 0.45);
+}
+
+#loginBtn:hover {
+  background: linear-gradient(90deg, #4caf50, #388e3c);
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(56, 142, 60, 0.7);
+}
+
+@media (max-width: 400px) {
+  .loginDiv {
+    width: 90%;
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  select {
+    border-radius: 24px;
+    padding: 12px 14px;
+  }
+
+  #loginBtn {
+    border-radius: 24px;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  #loginTitle {
+    font-size: 1.6rem;
+  }
 }
